@@ -1,0 +1,6 @@
+{
+  "name": "Iron & Glory: Medieval Arena",
+  "description": "Динамичный 2D средневековый файтинг с прокачкой характеристик, оружием, одиночной кампанией и локальным 1v1 PvP на двоих.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

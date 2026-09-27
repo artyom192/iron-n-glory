@@ -1,0 +1,212 @@
+import { CharacterClassDef } from '../types/game';
+
+export const CHARACTER_CLASSES: CharacterClassDef[] = [
+  {
+    id: 'warrior',
+    name: 'Воин',
+    title: 'Защитник Арены',
+    description: 'Мастер оборонительного боя. Вооружён мечом и крепким дубовым щитом. Высокое здоровье и броня позволяют выдерживать шквал ударов.',
+    weaponName: 'Меч и Щит',
+    weaponType: 'sword_shield',
+    baseStats: {
+      maxHp: 260,
+      attack: 28,
+      defense: 22,
+      speed: 210,
+      attackSpeed: 1.4,
+      critChance: 0.12,
+      abilityPower: 1.2,
+    },
+    ability: {
+      id: 'shield_bash',
+      name: 'Удар Щитом',
+      description: 'Стремительный рывок вперёд с ударом щита, наносящий дробящий урон, отбрасывающий врага и оглушающий его на 1 сек.',
+      cooldown: 6.0,
+      damageMultiplier: 1.8,
+      icon: 'Shield',
+    },
+    visuals: {
+      primaryColor: '#3b82f6', // Steel Blue
+      secondaryColor: '#1e3a8a',
+      capeColor: '#1d4ed8',
+      skinColor: '#fed7aa',
+      hairColor: '#451a03',
+      helmetType: 'spartan',
+      weaponColor: '#cbd5e1',
+    },
+  },
+  {
+    id: 'berserker',
+    name: 'Берсерк',
+    title: 'Северный Сокрушитель',
+    description: 'Неукротимый дикарь с массивным двуручным топором. Обладает колоссальным уроном и сокрушительной силой, жертвуя защитой ради ярости.',
+    weaponName: 'Двуручный Топор',
+    weaponType: 'greataxe',
+    baseStats: {
+      maxHp: 230,
+      attack: 46,
+      defense: 10,
+      speed: 195,
+      attackSpeed: 1.0,
+      critChance: 0.20,
+      abilityPower: 1.6,
+    },
+    ability: {
+      id: 'rage_strike',
+      name: 'Удар Ярости',
+      description: 'Сокрушительный прыжок с мощным ударом о землю, вызывающий ударную волну с громадным уроном.',
+      cooldown: 7.5,
+      damageMultiplier: 2.6,
+      icon: 'Axe',
+    },
+    visuals: {
+      primaryColor: '#dc2626', // Crimson Red
+      secondaryColor: '#7f1d1d',
+      capeColor: '#991b1b',
+      skinColor: '#fbcfe8',
+      hairColor: '#f97316', // Fiery orange hair
+      helmetType: 'horned',
+      weaponColor: '#94a3b8',
+    },
+  },
+  {
+    id: 'rogue',
+    name: 'Разбойник',
+    title: 'Тень Переулков',
+    description: 'Молниеносный убийца с двумя отравленными кинжалами. Высочайшая скорость передвижения и частота атак, компенсирующие малое здоровье.',
+    weaponName: 'Парные Кинжалы',
+    weaponType: 'daggers',
+    baseStats: {
+      maxHp: 180,
+      attack: 24,
+      defense: 8,
+      speed: 260,
+      attackSpeed: 2.2,
+      critChance: 0.35,
+      abilityPower: 1.4,
+    },
+    ability: {
+      id: 'dash_attack',
+      name: 'Теневой Рывок',
+      description: 'Мгновенное перемещение сквозь врага с резким ударом в спину и гарантированным критическим уроном.',
+      cooldown: 5.0,
+      damageMultiplier: 2.2,
+      icon: 'Zap',
+    },
+    visuals: {
+      primaryColor: '#10b981', // Forest Emerald
+      secondaryColor: '#064e3b',
+      capeColor: '#047857',
+      skinColor: '#fde047',
+      hairColor: '#172554',
+      helmetType: 'hood',
+      weaponColor: '#e2e8f0',
+    },
+  },
+  {
+    id: 'archer',
+    name: 'Лучник',
+    title: 'Вольный Стрелок',
+    description: 'Снайпер дальнего боя. Держит врагов на расстоянии меткими залпами стрел. Высокая мобильность позволяет кайтить и изматывать противника.',
+    weaponName: 'Охотничий Лук',
+    weaponType: 'bow',
+    baseStats: {
+      maxHp: 190,
+      attack: 29,
+      defense: 10,
+      speed: 240,
+      attackSpeed: 1.5,
+      critChance: 0.22,
+      abilityPower: 1.3,
+    },
+    ability: {
+      id: 'power_shot',
+      name: 'Мощный Залп',
+      description: 'Заряжает бронебойную огненную стрелу, пробивающую преграды и отбрасывающую врага через всю арену.',
+      cooldown: 6.5,
+      damageMultiplier: 2.4,
+      icon: 'Target',
+    },
+    visuals: {
+      primaryColor: '#d97706', // Amber Leather
+      secondaryColor: '#78350f',
+      capeColor: '#b45309',
+      skinColor: '#fed7aa',
+      hairColor: '#713f12',
+      helmetType: 'hood_feather',
+      weaponColor: '#a16207',
+    },
+  },
+  {
+    id: 'mage',
+    name: 'Маг',
+    title: 'Верховный Чародей',
+    description: 'Властелин тайных искусств. Запускает сгустки чародейской энергии и обрушивает на врагов разрушительные огненные шары.',
+    weaponName: 'Посох Стихий',
+    weaponType: 'staff',
+    baseStats: {
+      maxHp: 170,
+      attack: 26,
+      defense: 7,
+      speed: 215,
+      attackSpeed: 1.3,
+      critChance: 0.18,
+      abilityPower: 1.8,
+    },
+    ability: {
+      id: 'fireball',
+      name: 'Огненный Шар',
+      description: 'Сотворяет гигантскую пылающую сферу, взрывающуюся при контакте и наносящую огромный урон по площади.',
+      cooldown: 6.0,
+      damageMultiplier: 2.8,
+      icon: 'Flame',
+    },
+    visuals: {
+      primaryColor: '#8b5cf6', // Mystic Purple
+      secondaryColor: '#4c1d95',
+      capeColor: '#6d28d9',
+      skinColor: '#ffedd5',
+      hairColor: '#e0e7ff', // Silver white hair
+      helmetType: 'wizard_hat',
+      weaponColor: '#fbbf24',
+    },
+  },
+  {
+    id: 'knight',
+    name: 'Рыцарь',
+    title: 'Благородный Паладин',
+    description: 'Универсальный воин королевской гвардии. Идеальный баланс прочности, скорости и дальности ударов длинным палашом.',
+    weaponName: 'Рыцарский Палаш',
+    weaponType: 'broadsword',
+    baseStats: {
+      maxHp: 240,
+      attack: 34,
+      defense: 18,
+      speed: 220,
+      attackSpeed: 1.35,
+      critChance: 0.15,
+      abilityPower: 1.3,
+    },
+    ability: {
+      id: 'whirlwind',
+      name: 'Вихрь Стали',
+      description: 'Вращается вокруг своей оси на 360 градусов, нанося череду сокрушительных ударов всем вокруг.',
+      cooldown: 6.0,
+      damageMultiplier: 2.1,
+      icon: 'RotateCw',
+    },
+    visuals: {
+      primaryColor: '#eab308', // Gold / Silver Knight
+      secondaryColor: '#854d0e',
+      capeColor: '#b91c1c', // Crimson royal cape
+      skinColor: '#fed7aa',
+      hairColor: '#1e293b',
+      helmetType: 'full_helm',
+      weaponColor: '#f1f5f9',
+    },
+  },
+];
+
+export function getClassById(id: string): CharacterClassDef {
+  return CHARACTER_CLASSES.find((c) => c.id === id) || CHARACTER_CLASSES[0];
+}
